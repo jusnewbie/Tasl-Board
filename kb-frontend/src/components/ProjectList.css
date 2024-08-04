@@ -1,0 +1,43 @@
+.project-list {
+  max-width: 100%; /* 使用百分比确保在全屏模式下也能适应 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap; /* 允许项目卡片换行 */
+  gap: 20px; /* 项目卡片之间的间距 */
+}
+
+.project-card {
+  flex: 1 1 300px; /* 项目卡片的基本宽度 */
+  max-width: 300px; /* 项目卡片的最大宽度 */
+}
+
+@media (max-width: 1200px) {
+  .project-card {
+    flex-basis: calc(25% - 20px); /* 在大屏幕上每行显示四个卡片，考虑到间距 */
+    max-width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-basis: calc(33.33% - 20px); /* 中等屏幕上每行显示三个卡片，考虑到间距 */
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    flex-basis: calc(50% - 20px); /* 小屏幕上每行显示两个卡片，考虑到间距 */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 320px) {
+  .project-card {
+    flex-basis: 100%; /* 在更小的屏幕上，卡片占据整行 */
+    max-width: 100%;
+  }
+}

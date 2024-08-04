@@ -1,0 +1,80 @@
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .project-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .project-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .project-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .project-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .project-card li:last-child {
+    border-bottom: none;
+  }
+  
+  .project-card li span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap; /* 允许项目卡片换行 */
+    gap: 20px; /* 项目卡片之间的间距 */
+  }
+  
+  .project-card {
+    flex: 1 1 300px; /* 项目卡片的基本宽度 */
+    max-width: 300px; /* 项目卡片的最大宽度 */
+  }
+  
+  @media (max-width: 768px) {
+    .project-list {
+      padding: 0 20px; /* 在小屏幕上添加内边距 */
+    }
+  
+    .project-card {
+      flex: 1 1 calc(50% - 20px); /* 小屏幕下每行显示两个卡片，考虑到间距 */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      flex: 1 1 100%; /* 在更小的屏幕上，卡片占据整行 */
+      max-width: 100%;
+    }
+  }

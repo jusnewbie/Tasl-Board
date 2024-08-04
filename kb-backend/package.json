@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@midwayjs/jwt": "^3.16.8",
+    "bcrypt": "^5.1.1"
+  }
+}
